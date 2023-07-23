@@ -3,45 +3,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pokenum</title>
+    <title>Pokenum Result</title>
   </head>
   <body>
-    <h1>Pokenum</h1>
-    <form action="/pokenum" method="post">
-      <label for="game">Game:</label>
-      <input type="text" name="game" id="game" required><br>
-      <label for="hand">Hand:</label>
-      <input type="text" name="hand" id="hand" required><br>
-      <label for="board">Board:</label>
-      <input type="text" name="board" id="board"><br>
-      <label for="dead">Dead:</label>
-      <input type="text" name="dead" id="dead"><br>
-      <label for="method">Method:</label>
-      <input type="text" name="method" id="method"><br>
-      <label for="iterations">Iterations:</label>
-      <input type="number" name="iterations" id="iterations"><br>
-      <label for="histogram">Histogram:</label>
-      <input type="checkbox" name="histogram" id="histogram"><br>
-      <input type="submit" value="Submit">
-    </form>
-    <div id="output"></div>
-    <script>
-      const form = document.querySelector('form');
-      const output = document.querySelector('#output');
-      form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const response = await fetch('/pokenum', {
-          method: 'POST',
-          body: formData
-        });
-        const data = await response.json();
-        if (data.error) {
-          output.innerHTML = `<p>Error: ${data.error}</p>`;
-        } else {
-          output.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-        }
-      });
-    </script>
+    <h1>Pokenum Result</h1>
+    {% set result_data = result | safe | json_loads %}
+    <h2>{{ result_data['legend'][0] }} {{ result_data['legend'][1] }} {{ result_data['legend'][2] }} {{ result_data['legend'][3] }} {{ result_data['legend'][4] }}</h2>
+    <table border="1">
+      <tr>
+        {% for header in result_data['headers'] %}
+        <th>{{ header }}</th>
+        {% endfor %}
+      </tr>
+      {% for row in result_data['values'] %}
+      <tr>
+        {% for value in row %}
+        <td>{{ value }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>

@@ -18,16 +18,16 @@ configure_logger(log_file)
 
 class PokenumRequest(BaseModel):
     game: str
-    hand: list
+    hand: List[str]
     board: Optional[list] = []
     dead: Optional[list] = []
     method: Optional[str] = None
     iterations: Optional[str] = None
-    histogram: Optional[str] = None
+    histogram: bool = False
 
 
 @app.post('/pokenum')
-async def run_pokenum(request: PokenumRequest):
+async def run_pokenum_api(request: PokenumRequest):
     game = request.game
     hand = request.hand
     board = request.board

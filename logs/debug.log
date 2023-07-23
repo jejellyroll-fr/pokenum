@@ -235,3 +235,49 @@
 2023-07-21 21:09:08 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
 2023-07-21 21:09:09 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
 2023-07-21 21:09:09 [DEBUG] <class 'str'>
+2023-07-22 20:30:42 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
+2023-07-22 20:30:42 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
+2023-07-22 20:30:42 [DEBUG] <class 'str'>
+2023-07-22 20:52:29 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
+2023-07-22 20:52:30 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
+2023-07-22 20:52:30 [DEBUG] <class 'str'>
+2023-07-23 13:30:06 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
+2023-07-23 13:30:06 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
+2023-07-23 13:30:06 [DEBUG] <class 'str'>
+2023-07-23 15:05:32 [DEBUG] hand: Ks Kc - As Ad
+2023-07-23 15:05:32 [DEBUG] Received parameters: game=-h, hand=Ks Kc - As Ad, board=, dead=, method=, iterations=, histogram=False
+2023-07-23 15:08:59 [DEBUG] hand: Ks Kc - As Ad
+2023-07-23 15:08:59 [DEBUG] Received parameters: game=-h, hand=Ks Kc - As Ad, board=, dead=, method=, iterations=, histogram=False
+2023-07-23 15:09:35 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
+2023-07-23 15:09:35 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
+2023-07-23 15:09:35 [DEBUG] <class 'str'>
+2023-07-23 20:33:00 [DEBUG] Received request with game=-h, hand=['Ac', '7c', '-', '6d', '6c'], board=[], dead=[], method=None, iterations=None, histogram=None
+2023-07-23 20:33:00 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ac", "7c", "785645", "45.88", "918813", "53.66", "7846", "0.46", "0.461"], ["6c", "6d", "918813", "53.66", "785645", "45.88", "7846", "0.46", "0.539"]]}
+2023-07-23 20:33:00 [DEBUG] <class 'str'>
+2023-07-23 20:41:49 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:41:49 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:41:49 [DEBUG] <class 'str'>
+2023-07-23 20:45:01 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:45:01 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:45:01 [DEBUG] <class 'str'>
+2023-07-23 20:49:36 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:49:36 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:49:36 [DEBUG] <class 'str'>
+2023-07-23 20:50:59 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:50:59 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:50:59 [DEBUG] <class 'str'>
+2023-07-23 20:51:23 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:51:23 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:51:23 [DEBUG] <class 'str'>
+2023-07-23 20:54:40 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:54:40 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:54:40 [DEBUG] <class 'str'>
+2023-07-23 20:55:44 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:55:44 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:55:44 [DEBUG] <class 'str'>
+2023-07-23 20:57:59 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:57:59 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:57:59 [DEBUG] <class 'str'>
+2023-07-23 20:59:33 [DEBUG] Received request with game=-h, hand=['Ks', 'Kc', '-', 'As', 'Ad'], board=[], dead=[], method=, iterations=, histogram=False
+2023-07-23 20:59:33 [DEBUG] Response: {"legend": ["Holdem", "Hi:", "1712304", "enumerated", "boards"], "headers": ["cards", "win", "%win", "lose", "%lose", "tie", "%tie", "EV"], "values": [["Ks", "Kc", "305177", "17.82", "1399204", "81.71", "7923", "0.46", "0.181"], ["As", "Ad", "1399204", "81.71", "305177", "17.82", "7923", "0.46", "0.819"]]}
+2023-07-23 20:59:33 [DEBUG] <class 'str'>

@@ -9,11 +9,16 @@
     <h1>Pokenum Result</h1>
     {% set result_data = result | safe | json_loads %}
     <h2>{{ result_data['legend'][0] }} {{ result_data['legend'][1] }} {{ result_data['legend'][2] }} {{ result_data['legend'][3] }} {{ result_data['legend'][4] }}</h2>
+    
+
     <table border="1">
       <tr>
+        <th colspan="{{ result_data['values'][0] | length - result_data['headers'] | length + 1 }}">{{ result_data['headers'][0] }}</th>
         {% for header in result_data['headers'] %}
-        <th>{{ header }}</th>
-        {% endfor %}
+        {% if not loop.first %}
+          <th>{{ header }}</th>
+        {% endif %}
+      {% endfor %}
       </tr>
       {% for row in result_data['values'] %}
       <tr>
@@ -25,3 +30,4 @@
     </table>
   </body>
 </html>
+

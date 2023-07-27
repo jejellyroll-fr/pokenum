@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_from_directory
 import requests
 from logger import configure_logger
 import os
@@ -23,6 +23,13 @@ logger = logging.getLogger(__name__)
 def index():
     logger.info('Rendering index.html')
     return render_template('index.html')
+
+@app.route('/app/gfx/white/<path:filename>')
+def serve_static(filename):
+    root_dir = os.path.dirname(os.path.abspath(__file__))
+    white_gfx_dir = os.path.join(root_dir, 'gfx', 'white')
+    return send_from_directory(white_gfx_dir, filename)
+
 
 @app.route('/pokenum', methods=['POST'])
 def run_pokenum_flask():

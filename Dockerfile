@@ -38,6 +38,7 @@ COPY templates/ ./templates
 COPY logger.py .
 COPY /.libs/ ./.libs
 COPY /logs/ ./logs
+COPY /gfx/ ./gfx
 # Install the custom library from the .deb package
 COPY --from=builder /tmp/libpoker-eval_139.0-1_amd64.deb /tmp/
 RUN dpkg -i /tmp/libpoker-eval_139.0-1_amd64.deb

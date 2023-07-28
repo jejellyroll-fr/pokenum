@@ -42,5 +42,5 @@ class Pokenum:
             raise RuntimeError(f"`{self.progpath}` does not exist")
 
 #pokenum = Pokenum()
-#output = pokenum.run('-h', 'Ac', '7c', '-', '5s', '4s', '-', 'Ks', 'Kd')
+#output = pokenum.run('-h', 'Ac', '7c', '-', '5s', '4s', '-', 'Ks', 'Kd','--', '2s', '3d', 'As')
 #print(output)

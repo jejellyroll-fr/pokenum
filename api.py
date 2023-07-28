@@ -40,71 +40,18 @@ async def run_pokenum_api(request: PokenumRequest):
     logger.debug(f"Received request with game={game}, hand={hand}, board={board}, dead={dead}, method={method}, iterations={iterations}, histogram={histogram}")
 
     try:
-        if board and not dead and not method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *board)
-        elif dead and not board and not method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *dead)
-        elif board and dead and not method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, *dead)
-        elif not board and not dead and method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, method=method)
-        elif not board and not dead and not method and iterations and not histogram:
-            output = pokenum.run(game, *hand, iterations=iterations)
-        elif not board and not dead and not method and not iterations and histogram:
-            output = pokenum.run(game, *hand, histogram=histogram)
-        elif board and not dead and method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, method=method)
-        elif board and not dead and not method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, iterations=iterations)
-        elif board and not dead and not method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *board, histogram=histogram)
-        elif dead and not board and method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *dead, method=method)
-        elif dead and not board and not method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *dead, iterations=iterations)
-        elif dead and not board and not method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *dead, histogram=histogram)
-        elif board and dead and method and not iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, *dead, method=method)
-        elif board and dead and not method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, *dead, iterations=iterations)
-        elif board and dead and not method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *board, *dead, histogram=histogram)
-        elif not board and not dead and method and iterations and not histogram:
-            output = pokenum.run(game, *hand, method=method, iterations=iterations)
-        elif not board and not dead and method and not iterations and histogram:
-            output = pokenum.run(game, *hand, method=method, histogram=histogram)
-        elif not board and not dead and not method and iterations and histogram:
-            output = pokenum.run(game, *hand, iterations=iterations, histogram=histogram)
-        elif board and dead and method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, *dead, method=method, iterations=iterations)
-        elif board and dead and method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *board, *dead, method=method, histogram=histogram)
-        elif board and dead and not method and iterations and histogram:
-            output = pokenum.run(game, *hand, *board, *dead, iterations=iterations, histogram=histogram)
-        elif not board and not dead and method and iterations and histogram:
-            output = pokenum.run(game, *hand, method=method, iterations=iterations, histogram=histogram)
-        elif board and not dead and method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *board, method=method, iterations=iterations)
-        elif board and not dead and method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *board, method=method, histogram=histogram)
-        elif board and not dead and not method and iterations and histogram:
-            output = pokenum.run(game, *hand, *board, iterations=iterations, histogram=histogram)
-        elif dead and not board and method and iterations and not histogram:
-            output = pokenum.run(game, *hand, *dead, method=method, iterations=iterations)
-        elif dead and not board and method and not iterations and histogram:
-            output = pokenum.run(game, *hand, *dead, method=method, histogram=histogram)
-        elif dead and not board and not method and iterations and histogram:
-            output = pokenum.run(game, *hand, *dead, iterations=iterations, histogram=histogram)
-        elif not board and not dead and method and iterations and histogram:
-            output = pokenum.run(game, *hand, method=method, iterations=iterations, histogram=histogram)
-        elif board and dead and method and iterations and histogram:
-            output = pokenum.run(game, *hand, *board, *dead, method=method, iterations=iterations, histogram=histogram)
-        else:
-            output = pokenum.run(game, *hand)
+        output = pokenum.run(
+            game,
+            *hand,
+            *(board if board else []),
+            *(dead if dead else [])
+        )
 
-        logger.debug(f"Response: {output}")
+
+
         logger.debug(type(output))
+        logger.debug(f"Response: {output}")
+
         return JSONResponse(content=output)
     except Exception as e:
         logger.error(f"Error: {e}")

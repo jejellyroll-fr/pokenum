@@ -40,8 +40,9 @@
         </div>
         <div class="mb-3">
           <label for="board" class="form-label">Board:</label>
-          <input type="text" name="board" id="board" class="form-control">
+          <input type="text" name="board" id="board" class="form-control" value="{{ "--" if not board else ",".join(board) }}">
         </div>
+        
         <div class="mb-3">
           <label for="dead" class="form-label">Dead:</label>
           <input type="text" name="dead" id="dead" class="form-control">

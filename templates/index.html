@@ -15,7 +15,24 @@
       <fieldset>
         <div class="mb-3">
           <label for="game" class="form-label">Game:</label>
-          <input type="text" name="game" id="game" class="form-control" required>
+          <select name="game" id="game" class="form-select">
+            <option value="-h">Holdem Hi</option>
+            <option value="-h8">Holdem Hi/Lo 8-or-better</option>
+            <option value="-o">Omaha Hi</option>
+            <option value="-o5">Omaha Hi 5cards</option>
+            <option value="-o6">Omaha Hi 6cards</option>
+            <option value="-o8">Omaha Hi/Lo 8-or-better</option>
+            <option value="-o85">Omaha 5cards Hi/Lo 8-or-better</option>
+            <option value="-7s">7-card Stud Hi</option>
+            <option value="-7s8">7-card Stud Hi/Lo 8-or-better</option>
+            <option value="-7snsq">7-card Stud Hi/Lo No Stinking Qualifier</option>
+            <option value="-r">7-card Stud Ace-to-5 Low (Razz)</option>
+            <option value="-5d" disabled>5-card Draw Hi (with Joker)</option>
+            <option value="-5d8" disabled>5-card Draw Hi/Lo 8-or-better (with Joker)</option>
+            <option value="-5dnsq" disabled>5-card Draw Hi/Lo No Stinking Qualifier (with Joker)</option>
+            <option value="-l" disabled>5-card Draw Ace-to-5 Lowball (with Joker)</option>
+            <option value="-l27">5-card Draw Deuce-to-Seven Lowball</option>
+          </select>
         </div>
         <div class="mb-3">
           <label for="hand" class="form-label">Hand:</label>

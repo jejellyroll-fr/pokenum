@@ -21,11 +21,34 @@ logger = logging.getLogger(__name__)
 
 @app.route('/')
 def index():
+    """
+    Renders the index.html template.
+
+    This function logs the rendering of the index.html template and returns the rendered template.
+
+    Returns:
+        str: The rendered index.html template.
+
+    """
+
     logger.info('Rendering index.html')
     return render_template('index.html')
 
 @app.route('/app/gfx/white/<path:filename>')
 def serve_static(filename):
+    """
+    Serves static files from the 'gfx/white' directory.
+
+    This function serves static files from the 'gfx/white' directory based on the provided filename.
+
+    Args:
+        filename (str): The name of the file to be served.
+
+    Returns:
+        Response: The response containing the requested file.
+
+    """
+
     root_dir = os.path.dirname(os.path.abspath(__file__))
     white_gfx_dir = os.path.join(root_dir, 'gfx', 'white')
     return send_from_directory(white_gfx_dir, filename)
@@ -33,6 +56,16 @@ def serve_static(filename):
 
 @app.route('/pokenum', methods=['POST'])
 def run_pokenum_flask():
+    """
+    Handles the POST request to '/pokenum' endpoint using Flask.
+
+    This function retrieves the request parameters from the form data, sends a POST request to the 'http://localhost:8000/pokenum' endpoint with the parameters in JSON format, and renders the 'pokenum.html' template with the response data.
+
+    Returns:
+        Response: The rendered 'pokenum.html' template.
+
+    """
+
     try:
         game = request.form['game']
         hand = request.form['hand'].split()

@@ -41,7 +41,7 @@ To run the Pokenum web project using Docker, you need to have Docker installed o
 
 
 
-2. Access the Pokenum API at `http://localhost:8080`.
+2. Access the Pokenum front at `http://localhost:8080` or the Pokenum front API at `http://localhost:8000`
 
 ## Usage
 

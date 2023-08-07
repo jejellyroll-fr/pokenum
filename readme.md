@@ -36,12 +36,12 @@ To run the Pokenum web project using Docker, you need to have Docker installed o
 1. Run the Docker container:
 
    ```
-   docker run -p 8081:8080 -p 8000:8000 pokenum
+   docker run -p 8080:8080 -p 8000:8000 pokenum
    ```
 
 
 
-2. Access the Pokenum front at `http://localhost:8080` or the Pokenum front API at `http://localhost:8000`
+2. Access the Pokenum front at `http://localhost:8080` or the Pokenum API at `http://localhost:8000`
 
 ## Usage
 
@@ -65,3 +65,7 @@ $ pokenum -l 7h 5s 3d Xx / Kd - 9s 8h 6d 4c / 8c
 $ pokenum -l27 5h 4h 3h 2h / 5s - 9s 8h 6d 4c / Kd
 $ pokenum -mc 10000 -l27 5h 4h 3h / 5s Qd - 9s 8h 6d / Ks Kh
 ```
+
+2. API doc
+
+`http://127.0.0.1:8000/redoc`

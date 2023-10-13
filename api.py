@@ -69,15 +69,24 @@ async def run_pokenum_api(request: PokenumRequest):
     logger.debug(f"Received request with game={game}, hand={hand}, board={board}, dead={dead}, method={method}, iterations={iterations}, histogram={histogram}")
 
     try:
-        output = pokenum.run(
-            method,
-            iterations,
-            game,
-            *hand,
-            *(board or []),
-            *(dead or [])
+        if method == "-mc":
+            output = pokenum.run(
+                method,
+                iterations,
+                game,
+                *hand,
+                *(board or []),
+                *(dead or [])
 
-        )
+            )
+        else:
+            output = pokenum.run(
+                game,
+                *hand,
+                *(board or []),
+                *(dead or [])
+
+            )
 
 
 

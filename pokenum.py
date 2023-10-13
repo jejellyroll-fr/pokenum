@@ -74,5 +74,5 @@ class Pokenum:
             raise RuntimeError(f"JSONDecodeError: {e}") from e
 
 #pokenum = Pokenum()
-#output = pokenum.run('-h', 'Ac', '7c', '-', '5s', '4s', '-', 'Ks', 'Kd','--', '2s', '3d', 'As')
+#output = pokenum.run('-h', 'Ac', '7c', '-', '5s', '4s', '-', 'Ks', 'Kd','--', '2s', '3d', 'As', "-mc", "10000")
 #print(output)

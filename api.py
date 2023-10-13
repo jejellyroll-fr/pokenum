@@ -70,10 +70,13 @@ async def run_pokenum_api(request: PokenumRequest):
 
     try:
         output = pokenum.run(
+            method,
+            iterations,
             game,
             *hand,
             *(board or []),
             *(dead or [])
+
         )
 
 

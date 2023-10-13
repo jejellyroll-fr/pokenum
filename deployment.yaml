@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokenum-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pokenum
+  template:
+    metadata:
+      labels:
+        app: pokenum
+    spec:
+      containers:
+      - name: pokenum
+        image: jejellyroll/pokenum:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080  # Change to the appropriate port for your FastAPI application
+        - containerPort: 8000  # Change to the appropriate port for your Flask application
+

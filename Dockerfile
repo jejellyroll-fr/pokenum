@@ -20,7 +20,7 @@ COPY libpoker-eval_139.0-1_amd64.deb /tmp/
 
 
 # Stage 2: Build the Flask application
-FROM python:3.8-slim AS final
+FROM python:3.14.0a1-slim AS final
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1

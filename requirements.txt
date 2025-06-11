@@ -1,5 +1,6 @@
-flask
-fastapi
-gunicorn
-requests
-uvicorn
+flask~=3.0.3
+Werkzeug>=3.0.6
+fastapi~=0.111.0
+uvicorn~=0.29.0
+gunicorn~=22.0.0
+requests~=2.32.0
